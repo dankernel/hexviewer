@@ -4,7 +4,7 @@ This utility prints a pretty `numpy.ndarray`.
 
 Useful for work with HEX (image processing, embedded programming, etc.).
 
-![image](./res/uint8_15_15.png)
+![image](https://github.com/dankernel/hexviewer/blob/canary/res/uint8_15_15.png)
 
 # Install
 
@@ -28,7 +28,7 @@ $ hexviewer data/data.npy
 
 The output is as follows:
 
-![image](./res/uint16_300_30.png)
+![image](https://github.com/dankernel/hexviewer/blob/canary/res/uint16_300_30.png)
 
 # Supported file formats
 
