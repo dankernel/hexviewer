@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="hexviewer", # Replace with your own username
-    version="0.1.3",
+    version="0.1.4",
     author="dankernel",
     author_email="dkdkernel@gmail.com",
     description="hexviewer",
