@@ -62,7 +62,7 @@ class HexViewer:
             if i == 0:
                 # columns index
                 temp = list(range(print_hex_columns + 1))
-                tepm = temp.append(array.shape[1])
+                temp.append(array.shape[1])
                 print(msgs[i].format(*temp))
             elif i == len(msgs) - 1:
                 # rows index
@@ -73,18 +73,18 @@ class HexViewer:
                     if len(msgs) + ellipsis_line - 1 == i:
                         # ellipsis line ('..')
                         msgs[i] = msgs[i].replace('{:02X}', '..')
-                        tepm = temp.insert(0, i - 2) # index
+                        temp.insert(0, i - 2) # index
                     elif len(msgs) + ellipsis_line - 2 < i:
                         # afterword (-n)
                         temp = list(array[i - print_hex_rows - 3]) # Hex datas
-                        tepm = temp.insert(0, i - print_hex_rows - 3) # index
+                        temp.insert(0, i - print_hex_rows - 3) # index
                     else:
                         # general data (+n)
                         temp = list(array[i-2]) # Hex datas
-                        tepm = temp.insert(0, i - 2) # index
+                        temp.insert(0, i - 2) # index
                 else:
                     temp = list(array[i-2])
-                    tepm = temp.insert(0, i - 2)
+                    temp.insert(0, i - 2)
 
                 print(msgs[i].format(*temp))
 
