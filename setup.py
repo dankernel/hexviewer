@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/dankernel/hexviewer",
     packages=setuptools.find_packages(),
     install_requires = ['python-telegram-bot'],
-    scripts=['hexviewer/hexviewer', 'hexviewer/config.ini'],
+    scripts=['hexviewer/hexviewer.py'],
     package_data = {'': ['hexviewer/config.ini']},
     include_package_data=True,
     classifiers=[
