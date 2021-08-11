@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
 
 import os
 import numpy as np
+import sys
+
 from termcolor import colored
 
 
@@ -107,7 +110,7 @@ class HexViewer:
                 print(print_format_string[i].format(array.shape[0]))
             else:
                 # data
-                if self.is_ellipsis_columns:
+                if self.is_ellipsis_rows:
                     if len(print_format_string) + ellipsis_line - 1 == i:
                         # ellipsis line ('..')
                         print_format_string[i] = print_format_string[i].replace('{:02X}', '..')
@@ -186,5 +189,20 @@ def test():
 
 if __name__ == '__main__':
 
-    test()
+    if len(sys.argv) != 2:
+        print('input npy file')
+        sys.exit(-1)
+
+    path = sys.argv[1]
+    if os.path.isfile(path):
+
+        if os.path.splitext(path)[-1].lower() != '.npy':
+            print('input npy file')
+            exit(-1)
+
+        array = np.load(path)
+        hex_viewer = HexViewer(array)
+        hex_viewer.show()
+
+    exit()
 
