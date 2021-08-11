@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="hexviewer", # Replace with your own username
-    version="0.1.0",
+    version="0.1.2",
     author="dankernel",
     author_email="dkdkernel@gmail.com",
     description="hexviewer",
@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/dankernel/hexviewer",
     packages=setuptools.find_packages(),
     install_requires = ['python-telegram-bot'],
-    scripts=['hexviewer/hexviewer.py'],
+    scripts=['hexviewer/hexviewer', 'hexviewer/hexviewer.py'],
     package_data = {'': ['hexviewer/config.ini']},
     include_package_data=True,
     classifiers=[
