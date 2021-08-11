@@ -1,3 +1,11 @@
 #!/bin/bash
 
-python3 hexviewer.py $1
+CURRENT_PATH=`pwd -P`
+
+RELATIVE_DIR=`dirname "$0"`
+cd $RELATIVE_DIR
+SHELL_PATH=`pwd -P`
+echo $SHELL_PATH
+
+python3 ${SHELL_PATH}/hexviewer.py ${CURRENT_PATH}/$1
+
